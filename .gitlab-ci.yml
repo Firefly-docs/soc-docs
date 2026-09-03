@@ -19,6 +19,8 @@ sync_to_target_repo:
     # 添加目标仓库
     - git remote add target git@github.com:Firefly-docs/soc-docs.git
     # 推送当前分支到目标仓库的指定分支
+    - unset http_proxy
+    - unset https_proxy
     - git push target HEAD:master
     - $SOC_SYNC
     # 如果你想强制覆盖目标分支（慎用）
