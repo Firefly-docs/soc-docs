@@ -22,7 +22,7 @@ sync_to_target_repo:
     - unset http_proxy
     - unset https_proxy
     - git push target HEAD:master
-    - $SOC_SYNC
+    - eval "$SOC_SYNC"
     # 如果你想强制覆盖目标分支（慎用）
     # - git push target $CI_COMMIT_REF_NAME:$TARGET_BRANCH --force
   only:
